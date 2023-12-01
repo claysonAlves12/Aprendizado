@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public\css\style.css">
+    <title>SwitchCase</title>
+</head>
+<body>
+    <header>
+        <h1>Exercicio 2</h1>
+    </header>
+
+    <section>
+        <h2>Exercicio Switch Case</h2>
+        <h3>1. Elabore uma classe que solicita uma letra e a aplicação informa se a letra digitada é uma vogal ou não.
+        </h3>
+
+        <p id ="vowEl">Informe uma letra: <input type="text" id="vowel"><button onclick="voWel()">Verificar</button></p>
+
+        <p id = "res">Aguardando letra...</p>
+    </section>
+
+    <script>
+        function voWel() {
+            let vowel = document.getElementById("vowel").value;
+            let res = document.getElementById("res");
+
+            let vowels = vowel.toUpperCase();
+
+            switch (vowels) {
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    res.innerText = "Vogal";
+                    break;
+                default:
+                    res.innerText = "Não é vogal";
+                    break;
+            }
+        }
+    </script>
+
+
+    <section>
+        <p>Voltar página <a href="index.html">Exercicio If e Else</a></p>
+    </section>
+</body>
+</html>

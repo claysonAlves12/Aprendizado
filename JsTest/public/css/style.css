@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 10px; /* Adiciona margem ao redor do corpo da página */
+    padding: 10px; /* Adiciona preenchimento ao redor do conteúdo do corpo da página */
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: 10px; /* Adiciona margem na parte inferior do cabeçalho */
+  }
+  
+  main {
+    padding: 2em;
+  }
+  h3 {
+    color: #3498db;
+    margin-bottom: 10px; /* Adiciona margem na parte inferior dos títulos */
+  }
+  
+  p {
+    line-height: 1.6;
+    margin-bottom: 10px; /* Adiciona margem na parte inferior dos parágrafos */
+  }
+  
+  footer {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px; /* Adiciona margem na parte superior do rodapé */
+  }
+  

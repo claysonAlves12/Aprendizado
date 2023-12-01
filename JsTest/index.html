@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public\css\style.css">
+    <title>Exercicios</title>
+</head>
+<body>
+    <header>
+        <h1>Exercicios</h1>
+    </header>
+    
+    <section>
+        <h2>Exercicio If e Else</h2>
+        <h3>1. Faça uma classe que receba três inteiros e diga qual deles é o maior e qual o menor.</h3>
+
+        <form id = "numberForm">
+            <label for="numberOne">Número 1: </label>
+            <input type="number" id = "numberOne" required><br>
+
+            <label for="numberTwo">Número 2:</label>
+            <input type="number" id="numberTwo" required><br>
+
+            <label for="numberThree">Número 3: </label>
+            <input type = "number" id = "numberThree" required><br><br>
+
+            <button type="button" onclick="numbers()">Pesquisar Número Maior</button>
+        </form>
+        <p id = "res">
+            Aguardando Número...
+        </p>
+    </section>
+    
+    <section>
+        <h3>2.Escreva um classe que recebe um inteiro e diga se é par ou ímpar. Use o operador matemático % (resto da divisão ou módulo). </h3>
+
+        <p id = "numberParouodd">Insira um número: <input type="number" name="ParouOdd" id="ParouOdd"> <input type="button" value="Enviar" onclick="ParOurOdd()"></p>
+
+        <p id = "resParOuOdd"> Aguardando...</p>
+    </section>
+
+    <section>
+        <h3>3. Elabore uma classe que receba uma nota, a classe irar verificar se você passou direto, ficou de recuperação ou foi reprovado na matéria.</h3>
+
+        <p id = "note">Insira sua nota: <input type="number" name="notes" id="notes"><input type="button" value="Enviar Nota" onclick="notesStudent()"></p>
+
+        <p id = "notesStudent"> Aguardando...</p>
+    </section>
+
+    <script>
+       function numbers(){
+            let numberOne = parseInt(document.getElementById("numberOne").value);
+            let numberTwo = parseInt(document.getElementById("numberTwo").value);
+            let numberThree = parseInt(document.getElementById("numberThree").value);
+            let res = document.getElementById("res");
+            
+            let HigherNumber,smallestNumber;
+
+            if(numberOne > numberTwo && numberOne > numberThree ){
+                HigherNumber = numberOne;
+
+            }else if(numberTwo > numberOne && numberTwo> numberThree){
+                HigherNumber = numberTwo;   
+            } else {
+                HigherNumber = numberThree;
+            }
+
+            if(numberOne < numberTwo && numberOne < numberThree ){
+                smallestNumber = numberOne;
+
+            }else if(numberTwo < numberOne && numberTwo < numberThree){
+                smallestNumber = numberTwo;   
+            } else {
+                smallestNumber = numberThree;
+            }
+            res.innerText = `O maior número é ${HigherNumber} e o menor númeor é ${smallestNumber}`
+        }   
+    </script>
+
+    <script>
+        function ParOurOdd(){
+            let ParOdd = parseInt(document.getElementById("ParouOdd").value);
+            let res = document.getElementById("resParOuOdd");
+            
+            if(ParOdd % 2 == 0){
+                res.innerText = `O número Par`
+            } else{
+                res.innerText = `O número é Impar`
+            }
+         
+        }
+    </script>
+
+    <script>
+        function notesStudent(){
+        let note = parseInt(document.getElementById("notes").value);
+        let res = document.getElementById("notesStudent");
+        
+        if(note >= 7){
+            res.innerText = "Aprovado"
+        }else if(note >= 5 && note < 6){
+            res.innerText = "Recuperação"
+        } else {
+            res.innerText = "Reprovado"
+        }
+    }
+    </script>
+
+    <section>
+        <p>Próxima página <a href="switchCase.html">Estrutura condicional: Switch Case</a></p>
+    </section>
+</body>
+</html>
